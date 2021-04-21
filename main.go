@@ -3,16 +3,9 @@ package main
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/alecthomas/kong"
-	"gopkg.in/yaml.v2"
 )
-
-// World is a struct containing the variables and external structs of a world.
-type World struct {
-	Name string
-}
 
 // CLI is the struct containing all arguments and help
 var CLI struct {
@@ -20,26 +13,10 @@ var CLI struct {
 	} `cmd help:"Add an item"`
 	Rm struct {
 	} `cmd help:"Remove an item"`
-}
-
-func oldmain() {
-	world := World{}
-	world.Name = "foo"
-
-	doc, err := yaml.Marshal(&world)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Printf("%s\n", string(doc))
-
-	err = yaml.Unmarshal([]byte(doc), &world)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("%+v\n", world)
-
-	return
+	Edit struct {
+	} `cmd help:"Edit and item"`
+	Rs struct {
+	} `cmd help:"List items"`
 }
 
 func main() {
