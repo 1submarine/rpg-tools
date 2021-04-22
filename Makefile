@@ -1,7 +1,13 @@
 OS=darwin
-ARCH=
+ARCH=arm64
 
 all: compile
 
 compile:
-	go build -o rmanage *.go
+	GOOS=$(OS) GOARCH=$(ARCH) go build -o rmanage *.go
+	
+install: compile
+	go install
+
+debug:
+	dlv debug github.com/1submarine/rpg-tools
