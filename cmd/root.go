@@ -18,9 +18,9 @@ var (
 	userLicense string
 
 	rootCmd = &cobra.Command{
-		Use:   "rmanage",
+		Use:   "rpg-tools",
 		Short: "A tool to manage TTRPGs.",
-		Long:  `A tool to manage TTPRGs.`,
+		Long:  `A set of tools designed to allow game masters to journal, edit, and export data pertaining to RPGs.`,
 	}
 )
 

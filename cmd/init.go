@@ -37,7 +37,7 @@ func initRun(path string) {
 	// Create subdirectories through foreach
 	directories := []string{"campaign", "character", "world"}
 	for _, directory := range directories {
-		if _, err = os.Stat(directory); err == nil {
+		if _, err = os.Stat(directory); os.IsNotExist(err) {
 			err = os.Mkdir(fmt.Sprintf("%s/%s", path, directory), os.ModePerm)
 			if err != nil {
 				log.Fatal(err)
@@ -50,7 +50,7 @@ func initRun(path string) {
 	// Create files
 	files := []string{"config.yaml"}
 	for _, file := range files {
-		if _, err = os.Stat(file); err == nil {
+		if _, err = os.Stat(file); os.IsNotExist(err) {
 			_, err = os.Create(fmt.Sprintf("%s/%s", path, file))
 			if err != nil {
 				log.Fatal(err)
