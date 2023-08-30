@@ -3,15 +3,8 @@ module github.com/1submarine/rpg-tools
 go 1.16
 
 require (
-	github.com/armon/consul-api v0.0.0-20180202201655-eb2c6b5be1b6 // indirect
-	github.com/coreos/go-etcd v2.0.0+incompatible // indirect
-	github.com/cpuguy83/go-md2man v1.0.10 // indirect
-	github.com/go-delve/delve v1.6.0 // indirect
-	github.com/mitchellh/go-homedir v1.1.0 // indirect
-	github.com/pkg/profile v0.0.0-20170413231811-06b906832ed0 // indirect
-	github.com/spf13/cobra v1.1.3 // indirect
-	github.com/spf13/viper v1.7.1 // indirect
-	github.com/ugorji/go/codec v0.0.0-20181204163529-d75b2dcb6bc8 // indirect
-	github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	github.com/spf13/cobra v1.1.3
+	github.com/spf13/viper v1.7.1
+	golang.org/x/sys v0.0.0-20200625212154-ddb9806d33ae // indirect
+	gopkg.in/yaml.v3 v3.0.0
 )
